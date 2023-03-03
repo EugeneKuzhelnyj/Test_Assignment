@@ -46,7 +46,8 @@ public class AuthorizationTest {
                 .setUserNameField(username)
                 .setPasswordField(password)
                 .clickOnLoginButton();
-        Assertions.assertEquals(LOGIN_URL,GetURL.getCurrentURL(),"Account login failed");
+        Assertions.assertEquals(LOGIN_URL,GetURL.getCurrentURL(),
+                "The user was able to login with invalid credentials");
     }
 
 }
